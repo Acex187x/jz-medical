@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <!-- Definice hlavního elementu zdravotniCentrum -->
+    <xs:element name="zdravotniCentrum">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="nazev" type="xs:string"/>
+                <xs:element name="adresa" type="adresaType"/>
+                <xs:element name="kontakt" type="kontaktType"/>
+                <xs:element name="oteviraciDoba" type="oteviraciDobaType"/>
+                <xs:element name="oddeleni" type="oddeleniType"/>
+                <xs:element name="vybaveni" type="vybaveniType"/>
+                <xs:element name="pojistovny" type="pojistovnyType"/>
+                <xs:element name="aktuality" type="aktualityType"/>
+                <xs:element name="recenze" type="recenzeType"/>
+            </xs:sequence>
+            <xs:attribute name="id" type="xs:string" use="required"/>
+            <xs:attribute name="pojistovna" type="xs:boolean" use="required"/>
+            <xs:attribute name="bezbarierovy" type="xs:boolean" use="required"/>
+            <xs:attribute name="akreditace" type="xs:boolean" use="required"/>
+            <xs:attribute name="parkovanizdarma" type="xs:boolean" use="required"/>
+            <xs:attribute name="wifi" type="xs:boolean" use="required"/>
+            <xs:attribute name="detskykoutek" type="xs:boolean" use="required"/>
+            <xs:attribute name="obcerstveni" type="xs:boolean" use="required"/>
+            <xs:attribute name="onlineobjednani" type="xs:boolean" use="required"/>
+            <xs:attribute name="kategorie" type="xs:string" use="optional"/>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Definice typu adresaType -->
+    <xs:complexType name="adresaType">
+        <xs:sequence>
+            <xs:element name="ulice" type="xs:string"/>
+            <xs:element name="mesto" type="xs:string"/>
+            <xs:element name="psc" type="pscType"/>
+            <xs:element name="kraj" type="xs:string"/>
+            <xs:element name="gps" type="gpsType"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Vlastní restrikce pro PSČ - musí být 5 číslic -->
+    <xs:simpleType name="pscType">
+        <xs:restriction base="xs:string">
+            <!-- Omezení: pouze 5 číslic -->
+            <xs:pattern value="\d{5}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Definice typu gpsType -->
+    <xs:complexType name="gpsType">
+        <xs:sequence>
+            <xs:element name="latitude" type="latitudeType"/>
+            <xs:element name="longitude" type="longitudeType"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Vlastní restrikce pro zeměpisnou šířku -->
+    <xs:simpleType name="latitudeType">
+        <xs:restriction base="xs:decimal">
+            <!-- Omezení: zeměpisná šířka musí být mezi -90 a 90 -->
+            <xs:minInclusive value="-90"/>
+            <xs:maxInclusive value="90"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Vlastní restrikce pro zeměpisnou délku -->
+    <xs:simpleType name="longitudeType">
+        <xs:restriction base="xs:decimal">
+            <!-- Omezení: zeměpisná délka musí být mezi -180 a 180 -->
+            <xs:minInclusive value="-180"/>
+            <xs:maxInclusive value="180"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Definice typu kontaktType -->
+    <xs:complexType name="kontaktType">
+        <xs:sequence>
+            <xs:element name="telefon" type="telefonType"/>
+            <xs:element name="email" type="emailType"/>
+            <xs:element name="web" type="xs:anyURI"/>
+            <xs:element name="socialniSite" type="socialniSiteType" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Vlastní restrikce pro telefonní číslo -->
+    <xs:simpleType name="telefonType">
+        <xs:restriction base="xs:string">
+            <!-- Omezení: formát telefonního čísla +420xxxxxxxxx -->
+            <xs:pattern value="\+420\d{9}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Vlastní restrikce pro email -->
+    <xs:simpleType name="emailType">
+        <xs:restriction base="xs:string">
+            <!-- Omezení: validní emailová adresa -->
+            <xs:pattern value="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Definice typu socialniSiteType -->
+    <xs:complexType name="socialniSiteType">
+        <xs:sequence>
+            <xs:element name="facebook" type="xs:anyURI" minOccurs="0"/>
+            <xs:element name="instagram" type="xs:anyURI" minOccurs="0"/>
+            <xs:element name="twitter" type="xs:anyURI" minOccurs="0"/>
+            <xs:element name="linkedin" type="xs:anyURI" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Definice typu oteviraciDobaType -->
+    <xs:complexType name="oteviraciDobaType">
+        <xs:sequence>
+            <xs:element name="den" type="denType" maxOccurs="7"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Definice typu denType -->
+    <xs:complexType name="denType">
+        <xs:sequence>
+            <xs:element name="otevreno" type="xs:string"/>
+            <xs:element name="zavreno" type="xs:string" minOccurs="0"/>
+            <xs:element name="poznamka" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+        <xs:attribute name="nazev" type="denNazevType" use="required"/>
+    </xs:complexType>
+
+    <!-- Vlastní restrikce pro názvy dnů -->
+    <xs:simpleType name="denNazevType">
+        <xs:restriction base="xs:string">
+            <!-- Omezení: pouze povolené hodnoty dnů v týdnu -->
+            <xs:enumeration value="Pondělí"/>
+            <xs:enumeration value="Úterý"/>
+            <xs:enumeration value="Středa"/>
+            <xs:enumeration value="Čtvrtek"/>
+            <xs:enumeration value="Pátek"/>
+            <xs:enumeration value="Sobota"/>
+            <xs:enumeration value="Neděle"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Definice typu oddeleniType -->
+    <xs:complexType name="oddeleniType">
+        <xs:sequence>
+            <xs:element name="oddeleniInfo" type="oddeleniInfoType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Definice typu oddeleniInfoType -->
+    <xs:complexType name="oddeleniInfoType">
+        <xs:sequence>
+            <xs:element name="popis" type="xs:string"/>
+            <xs:element name="lekar" type="lekarType" maxOccurs="unbounded"/>
+            <xs:element name="sluzby" type="sluzbyType"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:integer" use="required"/>
+        <xs:attribute name="nazev" type="xs:string" use="required"/>
+    </xs:complexType>
+
+    <!-- Definice typu lekarType -->
+    <xs:complexType name="lekarType">
+        <xs:sequence>
+            <xs:element name="jmeno" type="xs:string"/>
+            <xs:element name="prijmeni" type="xs:string"/>
+            <xs:element name="titul" type="xs:string"/>
+            <xs:element name="specializace" type="xs:string"/>
+            <xs:element name="atestace" type="xs:string"/>
+            <xs:element name="telefon" type="telefonType"/>
+            <xs:element name="email" type="emailType"/>
+            <xs:element name="dostupnost" type="dostupnostType"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Definice typu dostupnostType -->
+    <xs:complexType name="dostupnostType">
+        <xs:sequence>
+            <xs:element name="den" maxOccurs="7">
+                <xs:complexType>
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute name="nazev" type="denNazevType" use="required"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Definice typu sluzbyType -->
+    <xs:complexType name="sluzbyType">
+        <xs:sequence>
+            <xs:element name="sluzba" type="sluzbaType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Definice typu sluzbaType -->
+    <xs:complexType name="sluzbaType">
+        <xs:sequence>
+            <xs:element name="popis" type="xs:string"/>
+            <xs:element name="trvani" type="trvaniType"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:integer" use="required"/>
+        <xs:attribute name="nazev" type="xs:string" use="required"/>
+        <xs:attribute name="cena" type="xs:integer" use="required"/>
+        <xs:attribute name="pojistovna" type="xs:boolean" use="required"/>
+    </xs:complexType>
+
+    <!-- Vlastní restrikce pro trvání služby v minutách -->
+    <xs:simpleType name="trvaniType">
+        <xs:restriction base="xs:integer">
+            <!-- Omezení: trvání služby musí být mezi 5 a 240 minutami -->
+            <xs:minInclusive value="5"/>
+            <xs:maxInclusive value="240"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Definice typu vybaveniType -->
+    <xs:complexType name="vybaveniType">
+        <xs:sequence>
+            <xs:element name="pristroj" type="pristrojType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Definice typu pristrojType -->
+    <xs:complexType name="pristrojType">
+        <xs:sequence>
+            <xs:element name="popis" type="xs:string"/>
+            <xs:element name="rok" type="rokType"/>
+            <xs:element name="vyrobce" type="xs:string"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:integer" use="required"/>
+        <xs:attribute name="nazev" type="xs:string" use="required"/>
+        <xs:attribute name="oddeleni" type="xs:string" use="required"/>
+    </xs:complexType>
+
+    <!-- Vlastní restrikce pro rok výroby přístroje -->
+    <xs:simpleType name="rokType">
+        <xs:restriction base="xs:integer">
+            <!-- Omezení: rok výroby přístroje musí být mezi 2000 a aktuálním rokem -->
+            <xs:minInclusive value="2000"/>
+            <xs:maxInclusive value="2023"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Definice typu pojistovnyType -->
+    <xs:complexType name="pojistovnyType">
+        <xs:sequence>
+            <xs:element name="pojistovna" type="pojistovnaType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Definice typu pojistovnaType -->
+    <xs:complexType name="pojistovnaType">
+        <xs:sequence>
+            <xs:element name="smlouva" type="smlouvaType"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:integer" use="required"/>
+        <xs:attribute name="kod" type="xs:integer" use="required"/>
+        <xs:attribute name="nazev" type="xs:string" use="required"/>
+    </xs:complexType>
+
+    <!-- Definice typu smlouvaType -->
+    <xs:complexType name="smlouvaType">
+        <xs:sequence>
+            <xs:element name="cislo" type="xs:string"/>
+            <xs:element name="platnostOd" type="xs:date"/>
+            <xs:element name="platnostDo" type="xs:date"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Definice typu aktualityType -->
+    <xs:complexType name="aktualityType">
+        <xs:sequence>
+            <xs:element name="aktualita" type="aktualitaType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Definice typu aktualitaType -->
+    <xs:complexType name="aktualitaType">
+        <xs:sequence>
+            <xs:element name="nadpis" type="xs:string"/>
+            <xs:element name="obsah" type="xs:string"/>
+            <xs:element name="autor" type="xs:string"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:integer" use="required"/>
+        <xs:attribute name="datum" type="xs:date" use="required"/>
+    </xs:complexType>
+
+    <!-- Definice typu recenzeType -->
+    <xs:complexType name="recenzeType">
+        <xs:sequence>
+            <xs:element name="hodnoceni" type="hodnoceniType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Definice typu hodnoceniType -->
+    <xs:complexType name="hodnoceniType">
+        <xs:sequence>
+            <xs:element name="pacient" type="xs:string"/>
+            <xs:element name="text" type="xs:string"/>
+            <xs:element name="oddeleni" type="xs:string"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:integer" use="required"/>
+        <xs:attribute name="datum" type="xs:date" use="required"/>
+        <xs:attribute name="hvezdy" type="hvezdyType" use="required"/>
+    </xs:complexType>
+
+    <!-- Vlastní restrikce pro hodnocení hvězdičkami -->
+    <xs:simpleType name="hvezdyType">
+        <xs:restriction base="xs:integer">
+            <!-- Omezení: hodnocení musí být od 1 do 5 hvězdiček -->
+            <xs:minInclusive value="1"/>
+            <xs:maxInclusive value="5"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>
