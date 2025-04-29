@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<zdravotniCentrum xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<zdravotniCentrum
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                   xsi:noNamespaceSchemaLocation="schema.xsd" 
                   id="10001" 
                   pojistovna="true" 
@@ -10,350 +11,351 @@
                   detskykoutek="true" 
                   obcerstveni="true" 
                   onlineobjednani="true">
-    <nazev>Zdravotní centrum Medica</nazev>
-    <adresa>
-        <ulice>Lékařská 123</ulice>
-        <mesto>Praha</mesto>
-        <psc>11000</psc>
-        <kraj>Hlavní město Praha</kraj>
-        <gps>
-            <latitude>50.0755</latitude>
-            <longitude>14.4213</longitude>
-        </gps>
-    </adresa>
-    <kontakt>
-        <telefon>+420123456789</telefon>
-        <email>info@medica-centrum.cz</email>
-        <web>https://www.medica-centrum.cz</web>
-        <socialniSite>
-            <facebook>https://www.facebook.com/medicacentrum</facebook>
-            <instagram>https://www.instagram.com/medicacentrum</instagram>
-            <twitter>https://www.twitter.com/medicacentrum</twitter>
-            <linkedin>https://www.linkedin.com/company/medicacentrum</linkedin>
-        </socialniSite>
-    </kontakt>
-    <oteviraciDoba>
-        <den nazev="Pondělí">
-            <otevreno>07:30</otevreno>
-            <zavreno>18:00</zavreno>
-            <poznamka>Laboratoř od 7:00</poznamka>
-        </den>
-        <den nazev="Úterý">
-            <otevreno>07:30</otevreno>
-            <zavreno>18:00</zavreno>
-        </den>
-        <den nazev="Středa">
-            <otevreno>07:30</otevreno>
-            <zavreno>18:00</zavreno>
-            <poznamka>Specializované vyšetření do 19:00</poznamka>
-        </den>
-        <den nazev="Čtvrtek">
-            <otevreno>07:30</otevreno>
-            <zavreno>18:00</zavreno>
-        </den>
-        <den nazev="Pátek">
-            <otevreno>07:30</otevreno>
-            <zavreno>18:00</zavreno>
-        </den>
-        <den nazev="Sobota">
-            <otevreno>08:00</otevreno>
-            <zavreno>12:00</zavreno>
-            <poznamka>Pouze pohotovost</poznamka>
-        </den>
-        <den nazev="Neděle">
-            <otevreno>zavřeno</otevreno>
-        </den>
-    </oteviraciDoba>
-    <oddeleni>
-        <oddeleniInfo id="1" nazev="Praktický lékař">
-            <popis>Komplexní přístup k prevenci, diagnostice a léčbě dospělých pacientů.</popis>
-            <lekar>
-                <jmeno>Jan</jmeno>
-                <prijmeni>Novák</prijmeni>
-                <titul>MUDr.</titul>
-                <specializace>Praktické lékařství</specializace>
-                <atestace>Všeobecné lékařství</atestace>
-                <telefon>+420123456001</telefon>
-                <email>novak@medica-centrum.cz</email>
-                <dostupnost>
-                    <den nazev="Pondělí">8:00-16:00</den>
-                    <den nazev="Úterý">8:00-16:00</den>
-                    <den nazev="Středa">12:00-18:00</den>
-                    <den nazev="Čtvrtek">8:00-16:00</den>
-                    <den nazev="Pátek">8:00-14:00</den>
-                </dostupnost>
-            </lekar>
-            <sluzby>
-                <sluzba id="101" nazev="Preventivní prohlídka" cena="1200" pojistovna="true">
-                    <popis>Komplexní preventivní vyšetření včetně krevních testů.</popis>
-                    <trvani>45</trvani>
-                </sluzba>
-                <sluzba id="102" nazev="Kontrolní vyšetření" cena="500" pojistovna="true">
-                    <popis>Následná kontrola zdravotního stavu pacienta.</popis>
-                    <trvani>20</trvani>
-                </sluzba>
-                <sluzba id="103" nazev="Očkování" cena="800" pojistovna="false">
-                    <popis>Aplikace očkovací látky včetně konzultace.</popis>
-                    <trvani>15</trvani>
-                </sluzba>
-                <sluzba id="104" nazev="EKG vyšetření" cena="450" pojistovna="true">
-                    <popis>Základní vyšetření srdeční aktivity.</popis>
-                    <trvani>20</trvani>
-                </sluzba>
-                <sluzba id="105" nazev="Vyšetření pro řidičský průkaz" cena="800" pojistovna="false">
-                    <popis>Kompletní vyšetření zdravotní způsobilosti k řízení.</popis>
-                    <trvani>30</trvani>
-                </sluzba>
-            </sluzby>
-        </oddeleniInfo>
-        <oddeleniInfo id="2" nazev="Kardiologie">
-            <popis>Specializovaná péče o srdce a cévní systém.</popis>
-            <lekar>
-                <jmeno>Eva</jmeno>
-                <prijmeni>Svobodová</prijmeni>
-                <titul>MUDr.</titul>
-                <specializace>Kardiologie</specializace>
-                <atestace>Interní lékařství, Kardiologie</atestace>
-                <telefon>+420123456002</telefon>
-                <email>svobodova@medica-centrum.cz</email>
-                <dostupnost>
-                    <den nazev="Pondělí">9:00-15:00</den>
-                    <den nazev="Středa">9:00-15:00</den>
-                    <den nazev="Pátek">9:00-15:00</den>
-                </dostupnost>
-            </lekar>
-            <sluzby>
-                <sluzba id="201" nazev="Echokardiografie" cena="1500" pojistovna="true">
-                    <popis>Ultrazvukové vyšetření srdce a jeho struktur.</popis>
-                    <trvani>45</trvani>
-                </sluzba>
-                <sluzba id="202" nazev="Zátěžový test" cena="1800" pojistovna="true">
-                    <popis>Vyšetření srdce při fyzické zátěži.</popis>
-                    <trvani>60</trvani>
-                </sluzba>
-                <sluzba id="203" nazev="Holterovo monitorování" cena="1200" pojistovna="true">
-                    <popis>24hodinové sledování srdeční aktivity.</popis>
-                    <trvani>30</trvani>
-                </sluzba>
-                <sluzba id="204" nazev="Konzultace kardiologických nálezů" cena="800" pojistovna="true">
-                    <popis>Odborný rozbor a konzultace výsledků vyšetření.</popis>
-                    <trvani>30</trvani>
-                </sluzba>
-            </sluzby>
-        </oddeleniInfo>
-        <oddeleniInfo id="3" nazev="Neurologie">
-            <popis>Diagnostika a léčba onemocnění nervového systému.</popis>
-            <lekar>
-                <jmeno>Petr</jmeno>
-                <prijmeni>Černý</prijmeni>
-                <titul>MUDr.</titul>
-                <specializace>Neurologie</specializace>
-                <atestace>Neurologie</atestace>
-                <telefon>+420123456003</telefon>
-                <email>cerny@medica-centrum.cz</email>
-                <dostupnost>
-                    <den nazev="Úterý">8:00-16:00</den>
-                    <den nazev="Čtvrtek">8:00-16:00</den>
-                </dostupnost>
-            </lekar>
-            <sluzby>
-                <sluzba id="301" nazev="EEG vyšetření" cena="1300" pojistovna="true">
-                    <popis>Záznam elektrické aktivity mozku.</popis>
-                    <trvani>60</trvani>
-                </sluzba>
-                <sluzba id="302" nazev="EMG vyšetření" cena="1400" pojistovna="true">
-                    <popis>Vyšetření vodivosti nervů a funkce svalů.</popis>
-                    <trvani>45</trvani>
-                </sluzba>
-                <sluzba id="303" nazev="Vyšetření při bolestech hlavy" cena="950" pojistovna="true">
-                    <popis>Specializované vyšetření pro diagnostiku migrén a jiných bolestí hlavy.</popis>
-                    <trvani>30</trvani>
-                </sluzba>
-            </sluzby>
-        </oddeleniInfo>
-        <oddeleniInfo id="4" nazev="Pediatrie">
-            <popis>Komplexní péče o zdraví dětí od narození až po dospívání.</popis>
-            <lekar>
-                <jmeno>Lucie</jmeno>
-                <prijmeni>Dvořáková</prijmeni>
-                <titul>MUDr.</titul>
-                <specializace>Pediatrie</specializace>
-                <atestace>Pediatrie, Neonatologie</atestace>
-                <telefon>+420123456004</telefon>
-                <email>dvorakova@medica-centrum.cz</email>
-                <dostupnost>
-                    <den nazev="Pondělí">8:00-16:00</den>
-                    <den nazev="Úterý">8:00-16:00</den>
-                    <den nazev="Středa">8:00-16:00</den>
-                    <den nazev="Čtvrtek">8:00-16:00</den>
-                    <den nazev="Pátek">8:00-14:00</den>
-                </dostupnost>
-            </lekar>
-            <sluzby>
-                <sluzba id="401" nazev="Preventivní prohlídka dětí" cena="700" pojistovna="true">
-                    <popis>Pravidelná preventivní prohlídka pro děti různého věku.</popis>
-                    <trvani>30</trvani>
-                </sluzba>
-                <sluzba id="402" nazev="Očkování dětí" cena="600" pojistovna="true">
-                    <popis>Pravidelné i nadstandardní očkování pro děti.</popis>
-                    <trvani>20</trvani>
-                </sluzba>
-                <sluzba id="403" nazev="Vyšetření při akutních potížích" cena="500" pojistovna="true">
-                    <popis>Vyšetření při náhlých zdravotních problémech.</popis>
-                    <trvani>20</trvani>
-                </sluzba>
-                <sluzba id="404" nazev="Poradenství pro rodiče" cena="600" pojistovna="false">
-                    <popis>Konzultace ohledně výživy, vývoje a péče o dítě.</popis>
-                    <trvani>30</trvani>
-                </sluzba>
-            </sluzby>
-        </oddeleniInfo>
-        <oddeleniInfo id="5" nazev="Gynekologie">
-            <popis>Komplexní péče o ženské zdraví ve všech životních fázích.</popis>
-            <lekar>
-                <jmeno>Marie</jmeno>
-                <prijmeni>Horáková</prijmeni>
-                <titul>MUDr.</titul>
-                <specializace>Gynekologie a porodnictví</specializace>
-                <atestace>Gynekologie a porodnictví</atestace>
-                <telefon>+420123456005</telefon>
-                <email>horakova@medica-centrum.cz</email>
-                <dostupnost>
-                    <den nazev="Pondělí">9:00-17:00</den>
-                    <den nazev="Středa">9:00-17:00</den>
-                    <den nazev="Pátek">9:00-15:00</den>
-                </dostupnost>
-            </lekar>
-            <sluzby>
-                <sluzba id="501" nazev="Preventivní gynekologická prohlídka" cena="850" pojistovna="true">
-                    <popis>Kompletní gynekologické vyšetření včetně onkologické cytologie.</popis>
-                    <trvani>30</trvani>
-                </sluzba>
-                <sluzba id="502" nazev="Ultrazvukové vyšetření" cena="700" pojistovna="true">
-                    <popis>Ultrazvukové vyšetření ženských pohlavních orgánů.</popis>
-                    <trvani>20</trvani>
-                </sluzba>
-                <sluzba id="503" nazev="Těhotenská poradna" cena="800" pojistovna="true">
-                    <popis>Pravidelné kontroly během těhotenství.</popis>
-                    <trvani>30</trvani>
-                </sluzba>
-                <sluzba id="504" nazev="Antikoncepční poradenství" cena="600" pojistovna="false">
-                    <popis>Konzultace a doporučení vhodné antikoncepční metody.</popis>
-                    <trvani>20</trvani>
-                </sluzba>
-            </sluzby>
-        </oddeleniInfo>
-    </oddeleni>
-    <vybaveni>
-        <pristroj id="1001" nazev="Ultrazvuk GE Logiq P9" oddeleni="2,5">
-            <popis>Moderní ultrazvukový přístroj s vysokým rozlišením pro kardiologická a gynekologická vyšetření.</popis>
-            <rok>2022</rok>
-            <vyrobce>GE Healthcare</vyrobce>
-        </pristroj>
-        <pristroj id="1002" nazev="RTG systém Siemens Multix Impact" oddeleni="1">
-            <popis>Digitální RTG systém pro široké spektrum radiologických vyšetření.</popis>
-            <rok>2021</rok>
-            <vyrobce>Siemens Healthineers</vyrobce>
-        </pristroj>
-        <pristroj id="1003" nazev="EKG BTL-08" oddeleni="1,2">
-            <popis>12kanálový elektrokardiograf s automatickou analýzou a interpretací.</popis>
-            <rok>2023</rok>
-            <vyrobce>BTL</vyrobce>
-        </pristroj>
-        <pristroj id="1004" nazev="EEG Neurowerk EEG" oddeleni="3">
-            <popis>Systém pro elektroencefalografické vyšetření s 32 kanály.</popis>
-            <rok>2020</rok>
-            <vyrobce>Sigma Medizin-Technik</vyrobce>
-        </pristroj>
-        <pristroj id="1005" nazev="Kolposkop Leisegang OptiK 1" oddeleni="5">
-            <popis>Optický přístroj pro gynekologické vyšetření děložního čípku.</popis>
-            <rok>2021</rok>
-            <vyrobce>Leisegang</vyrobce>
-        </pristroj>
-    </vybaveni>
-    <pojistovny>
-        <pojistovna id="111" kod="111" nazev="Všeobecná zdravotní pojišťovna">
-            <smlouva>
-                <cislo>VZP-2023-1254</cislo>
-                <platnostOd>2023-01-01</platnostOd>
-                <platnostDo>2025-12-31</platnostDo>
-            </smlouva>
-        </pojistovna>
-        <pojistovna id="201" kod="201" nazev="Vojenská zdravotní pojišťovna">
-            <smlouva>
-                <cislo>VoZP-2023-0458</cislo>
-                <platnostOd>2023-01-01</platnostOd>
-                <platnostDo>2024-12-31</platnostDo>
-            </smlouva>
-        </pojistovna>
-        <pojistovna id="207" kod="207" nazev="Oborová zdravotní pojišťovna">
-            <smlouva>
-                <cislo>OZP-2023-0789</cislo>
-                <platnostOd>2023-01-01</platnostOd>
-                <platnostDo>2025-12-31</platnostDo>
-            </smlouva>
-        </pojistovna>
-        <pojistovna id="211" kod="211" nazev="Zdravotní pojišťovna ministerstva vnitra">
-            <smlouva>
-                <cislo>ZPMV-2023-0321</cislo>
-                <platnostOd>2023-01-01</platnostOd>
-                <platnostDo>2024-12-31</platnostDo>
-            </smlouva>
-        </pojistovna>
-    </pojistovny>
-    <aktuality>
-        <aktualita id="1" datum="2023-11-15">
-            <nadpis>Nové vybavení pro kardiologické oddělení</nadpis>
-            <obsah>Kardiologické oddělení našeho zdravotního centra bylo vybaveno nejnovějším echokardiografickým přístrojem GE Logiq P9, který umožňuje přesnější diagnostiku srdečních onemocnění. Nový přístroj nabízí vysokou kvalitu obrazu a pokročilé funkce pro detailní zobrazení srdečních struktur.</obsah>
-            <autor>MUDr. Eva Svobodová</autor>
-        </aktualita>
-        <aktualita id="2" datum="2023-10-28">
-            <nadpis>Zahájení očk
-            <nadpis>Zahájení očkování proti sezónní chřipce</nadpis>
-            <obsah>Od 1. listopadu zahajujeme očkování proti sezónní chřipce. Očkování je vhodné zejména pro seniory, chronicky nemocné pacienty a těhotné ženy. Objednat se můžete již nyní online nebo telefonicky. Většina zdravotních pojišťoven na očkování přispívá.</obsah>
-            <autor>MUDr. Jan Novák</autor>
-        </aktualita>
-        <aktualita id="3" datum="2023-09-15">
-            <nadpis>Nový lékař v našem týmu</nadpis>
-            <obsah>S radostí oznamujeme, že náš tým posílil MUDr. Tomáš Veselý, specialista v oboru endokrinologie. Doktor Veselý má více než 10 let praxe v diagnostice a léčbě onemocnění endokrinního systému, včetně poruch štítné žlázy a diabetu. Pacienti se mohou objednávat již nyní.</obsah>
-            <autor>Vedení zdravotního centra</autor>
-        </aktualita>
-        <aktualita id="4" datum="2023-08-10">
-            <nadpis>Rozšíření otevírací doby</nadpis>
-            <obsah>Od září rozšiřujeme otevírací dobu našeho centra. Nově budeme pacientům k dispozici ve všední dny od 7:30 do 18:00 hodin a v sobotu od 8:00 do 12:00 hodin. Věříme, že tato změna přispěje k větší dostupnosti naší péče pro pracující pacienty.</obsah>
-            <autor>Vedení zdravotního centra</autor>
-        </aktualita>
-        <aktualita id="5" datum="2023-07-05">
-            <nadpis>Preventivní program pro seniory</nadpis>
-            <obsah>Zahajujeme nový preventivní program zaměřený na seniory nad 65 let. Program zahrnuje komplexní vyšetření včetně krevních testů, EKG, kontroly zraku a sluchu. Pro pacienty VZP je program plně hrazen z pojištění, ostatní pacienti mohou využít zvýhodněnou cenu.</obsah>
-            <autor>MUDr. Jan Novák</autor>
-        </aktualita>
-    </aktuality>
-    <recenze>
-        <hodnoceni id="1" datum="2023-10-12" hvezdy="5">
-            <pacient>Jana Malá</pacient>
-            <text>Výborná péče a profesionální přístup. Oceňuji vstřícnost MUDr. Novákové a její trpělivost při vysvětlování všech postupů. Moderní vybavení a příjemné prostředí. Doporučuji!</text>
-            <oddeleni>Praktický lékař</oddeleni>
-        </hodnoceni>
-        <hodnoceni id="2" datum="2023-09-28" hvezdy="4">
-            <pacient>Petr Svoboda</pacient>
-            <text>Kardiologické oddělení mě příjemně překvapilo krátkou čekací dobou a důkladným vyšetřením. MUDr. Svobodová vše srozumitelně vysvětlila. Jediný malý nedostatek je obtížnější parkování v okolí.</text>
-            <oddeleni>Kardiologie</oddeleni>
-        </hodnoceni>
-        <hodnoceni id="3" datum="2023-09-05" hvezdy="5">
-            <pacient>Kateřina Nováková</pacient>
-            <text>S dcerou jsme navštívily pediatrické oddělení a musím říct, že přístup MUDr. Dvořákové je naprosto skvělý. Má přirozený přístup k dětem, vše trpělivě vysvětluje. Ordinace je krásně vybavená, dcera se tam cítila dobře a nebála se.</text>
-            <oddeleni>Pediatrie</oddeleni>
-        </hodnoceni>
-        <hodnoceni id="4" datum="2023-08-15" hvezdy="3">
-            <pacient>Josef Vrána</pacient>
-            <text>Vyšetření proběhlo profesionálně, ale čekal jsem téměř hodinu nad objednaným časem. Ocenil bych lepší organizaci objednávání pacientů. Samotná péče byla ale na vysoké úrovni.</text>
-            <oddeleni>Neurologie</oddeleni>
-        </hodnoceni>
-        <hodnoceni id="5" datum="2023-07-20" hvezdy="5">
-            <pacient>Martina Kovářová</pacient>
-            <text>Gynekologické oddělení mohu jen doporučit. MUDr. Horáková je velmi empatická a profesionální. Moderní vybavení a příjemné prostředí. Online objednávání funguje skvěle a ušetří spoustu času.</text>
-            <oddeleni>Gynekologie</oddeleni>
-        </hodnoceni>
-    </recenze>
-</zdravotniCentrum>
+	<nazev>Zdravotní centrum Medica</nazev>
+	<adresa>
+		<ulice>Lékařská 123</ulice>
+		<mesto>Praha</mesto>
+		<psc>11000</psc>
+		<kraj>Hlavní město Praha</kraj>
+		<gps>
+			<latitude>50.0755</latitude>
+			<longitude>14.4213</longitude>
+		</gps>
+	</adresa>
+	<kontakt>
+		<telefon>+420123456789</telefon>
+		<email>info@medica-centrum.cz</email>
+		<web>https://www.medica-centrum.cz</web>
+		<socialniSite>
+			<facebook>https://www.facebook.com/medicacentrum</facebook>
+			<instagram>https://www.instagram.com/medicacentrum</instagram>
+			<twitter>https://www.twitter.com/medicacentrum</twitter>
+			<linkedin>https://www.linkedin.com/company/medicacentrum</linkedin>
+		</socialniSite>
+	</kontakt>
+	<oteviraciDoba>
+		<den nazev="Pondělí">
+			<otevreno>07:30</otevreno>
+			<zavreno>18:00</zavreno>
+			<poznamka>Laboratoř od 7:00</poznamka>
+		</den>
+		<den nazev="Úterý">
+			<otevreno>07:30</otevreno>
+			<zavreno>18:00</zavreno>
+		</den>
+		<den nazev="Středa">
+			<otevreno>07:30</otevreno>
+			<zavreno>18:00</zavreno>
+			<poznamka>Specializované vyšetření do 19:00</poznamka>
+		</den>
+		<den nazev="Čtvrtek">
+			<otevreno>07:30</otevreno>
+			<zavreno>18:00</zavreno>
+		</den>
+		<den nazev="Pátek">
+			<otevreno>07:30</otevreno>
+			<zavreno>18:00</zavreno>
+		</den>
+		<den nazev="Sobota">
+			<otevreno>08:00</otevreno>
+			<zavreno>12:00</zavreno>
+			<poznamka>Pouze pohotovost</poznamka>
+		</den>
+		<den nazev="Neděle">
+			<otevreno>zavřeno</otevreno>
+		</den>
+	</oteviraciDoba>
+	<oddeleni>
+		<oddeleniInfo id="1" nazev="Praktický lékař">
+			<popis>Komplexní přístup k prevenci, diagnostice a léčbě dospělých pacientů.</popis>
+			<lekar>
+				<jmeno>Jan</jmeno>
+				<prijmeni>Novák</prijmeni>
+				<titul>MUDr.</titul>
+				<specializace>Praktické lékařství</specializace>
+				<atestace>Všeobecné lékařství</atestace>
+				<telefon>+420123456001</telefon>
+				<email>novak@medica-centrum.cz</email>
+				<dostupnost>
+					<den nazev="Pondělí">8:00-16:00</den>
+					<den nazev="Úterý">8:00-16:00</den>
+					<den nazev="Středa">12:00-18:00</den>
+					<den nazev="Čtvrtek">8:00-16:00</den>
+					<den nazev="Pátek">8:00-14:00</den>
+				</dostupnost>
+			</lekar>
+			<sluzby>
+				<sluzba id="101" nazev="Preventivní prohlídka" cena="1200" pojistovna="true">
+					<popis>Komplexní preventivní vyšetření včetně krevních testů.</popis>
+					<trvani>45</trvani>
+				</sluzba>
+				<sluzba id="102" nazev="Kontrolní vyšetření" cena="500" pojistovna="true">
+					<popis>Následná kontrola zdravotního stavu pacienta.</popis>
+					<trvani>20</trvani>
+				</sluzba>
+				<sluzba id="103" nazev="Očkování" cena="800" pojistovna="false">
+					<popis>Aplikace očkovací látky včetně konzultace.</popis>
+					<trvani>15</trvani>
+				</sluzba>
+				<sluzba id="104" nazev="EKG vyšetření" cena="450" pojistovna="true">
+					<popis>Základní vyšetření srdeční aktivity.</popis>
+					<trvani>20</trvani>
+				</sluzba>
+				<sluzba id="105" nazev="Vyšetření pro řidičský průkaz" cena="800" pojistovna="false">
+					<popis>Kompletní vyšetření zdravotní způsobilosti k řízení.</popis>
+					<trvani>30</trvani>
+				</sluzba>
+			</sluzby>
+		</oddeleniInfo>
+		<oddeleniInfo id="2" nazev="Kardiologie">
+			<popis>Specializovaná péče o srdce a cévní systém.</popis>
+			<lekar>
+				<jmeno>Eva</jmeno>
+				<prijmeni>Svobodová</prijmeni>
+				<titul>MUDr.</titul>
+				<specializace>Kardiologie</specializace>
+				<atestace>Interní lékařství, Kardiologie</atestace>
+				<telefon>+420123456002</telefon>
+				<email>svobodova@medica-centrum.cz</email>
+				<dostupnost>
+					<den nazev="Pondělí">9:00-15:00</den>
+					<den nazev="Středa">9:00-15:00</den>
+					<den nazev="Pátek">9:00-15:00</den>
+				</dostupnost>
+			</lekar>
+			<sluzby>
+				<sluzba id="201" nazev="Echokardiografie" cena="1500" pojistovna="true">
+					<popis>Ultrazvukové vyšetření srdce a jeho struktur.</popis>
+					<trvani>45</trvani>
+				</sluzba>
+				<sluzba id="202" nazev="Zátěžový test" cena="1800" pojistovna="true">
+					<popis>Vyšetření srdce při fyzické zátěži.</popis>
+					<trvani>60</trvani>
+				</sluzba>
+				<sluzba id="203" nazev="Holterovo monitorování" cena="1200" pojistovna="true">
+					<popis>24hodinové sledování srdeční aktivity.</popis>
+					<trvani>30</trvani>
+				</sluzba>
+				<sluzba id="204" nazev="Konzultace kardiologických nálezů" cena="800" pojistovna="true">
+					<popis>Odborný rozbor a konzultace výsledků vyšetření.</popis>
+					<trvani>30</trvani>
+				</sluzba>
+			</sluzby>
+		</oddeleniInfo>
+		<oddeleniInfo id="3" nazev="Neurologie">
+			<popis>Diagnostika a léčba onemocnění nervového systému.</popis>
+			<lekar>
+				<jmeno>Petr</jmeno>
+				<prijmeni>Černý</prijmeni>
+				<titul>MUDr.</titul>
+				<specializace>Neurologie</specializace>
+				<atestace>Neurologie</atestace>
+				<telefon>+420123456003</telefon>
+				<email>cerny@medica-centrum.cz</email>
+				<dostupnost>
+					<den nazev="Úterý">8:00-16:00</den>
+					<den nazev="Čtvrtek">8:00-16:00</den>
+				</dostupnost>
+			</lekar>
+			<sluzby>
+				<sluzba id="301" nazev="EEG vyšetření" cena="1300" pojistovna="true">
+					<popis>Záznam elektrické aktivity mozku.</popis>
+					<trvani>60</trvani>
+				</sluzba>
+				<sluzba id="302" nazev="EMG vyšetření" cena="1400" pojistovna="true">
+					<popis>Vyšetření vodivosti nervů a funkce svalů.</popis>
+					<trvani>45</trvani>
+				</sluzba>
+				<sluzba id="303" nazev="Vyšetření při bolestech hlavy" cena="950" pojistovna="true">
+					<popis>Specializované vyšetření pro diagnostiku migrén a jiných bolestí hlavy.</popis>
+					<trvani>30</trvani>
+				</sluzba>
+			</sluzby>
+		</oddeleniInfo>
+		<oddeleniInfo id="4" nazev="Pediatrie">
+			<popis>Komplexní péče o zdraví dětí od narození až po dospívání.</popis>
+			<lekar>
+				<jmeno>Lucie</jmeno>
+				<prijmeni>Dvořáková</prijmeni>
+				<titul>MUDr.</titul>
+				<specializace>Pediatrie</specializace>
+				<atestace>Pediatrie, Neonatologie</atestace>
+				<telefon>+420123456004</telefon>
+				<email>dvorakova@medica-centrum.cz</email>
+				<dostupnost>
+					<den nazev="Pondělí">8:00-16:00</den>
+					<den nazev="Úterý">8:00-16:00</den>
+					<den nazev="Středa">8:00-16:00</den>
+					<den nazev="Čtvrtek">8:00-16:00</den>
+					<den nazev="Pátek">8:00-14:00</den>
+				</dostupnost>
+			</lekar>
+			<sluzby>
+				<sluzba id="401" nazev="Preventivní prohlídka dětí" cena="700" pojistovna="true">
+					<popis>Pravidelná preventivní prohlídka pro děti různého věku.</popis>
+					<trvani>30</trvani>
+				</sluzba>
+				<sluzba id="402" nazev="Očkování dětí" cena="600" pojistovna="true">
+					<popis>Pravidelné i nadstandardní očkování pro děti.</popis>
+					<trvani>20</trvani>
+				</sluzba>
+				<sluzba id="403" nazev="Vyšetření při akutních potížích" cena="500" pojistovna="true">
+					<popis>Vyšetření při náhlých zdravotních problémech.</popis>
+					<trvani>20</trvani>
+				</sluzba>
+				<sluzba id="404" nazev="Poradenství pro rodiče" cena="600" pojistovna="false">
+					<popis>Konzultace ohledně výživy, vývoje a péče o dítě.</popis>
+					<trvani>30</trvani>
+				</sluzba>
+			</sluzby>
+		</oddeleniInfo>
+		<oddeleniInfo id="5" nazev="Gynekologie">
+			<popis>Komplexní péče o ženské zdraví ve všech životních fázích.</popis>
+			<lekar>
+				<jmeno>Marie</jmeno>
+				<prijmeni>Horáková</prijmeni>
+				<titul>MUDr.</titul>
+				<specializace>Gynekologie a porodnictví</specializace>
+				<atestace>Gynekologie a porodnictví</atestace>
+				<telefon>+420123456005</telefon>
+				<email>horakova@medica-centrum.cz</email>
+				<dostupnost>
+					<den nazev="Pondělí">9:00-17:00</den>
+					<den nazev="Středa">9:00-17:00</den>
+					<den nazev="Pátek">9:00-15:00</den>
+				</dostupnost>
+			</lekar>
+			<sluzby>
+				<sluzba id="501" nazev="Preventivní gynekologická prohlídka" cena="850" pojistovna="true">
+					<popis>Kompletní gynekologické vyšetření včetně onkologické cytologie.</popis>
+					<trvani>30</trvani>
+				</sluzba>
+				<sluzba id="502" nazev="Ultrazvukové vyšetření" cena="700" pojistovna="true">
+					<popis>Ultrazvukové vyšetření ženských pohlavních orgánů.</popis>
+					<trvani>20</trvani>
+				</sluzba>
+				<sluzba id="503" nazev="Těhotenská poradna" cena="800" pojistovna="true">
+					<popis>Pravidelné kontroly během těhotenství.</popis>
+					<trvani>30</trvani>
+				</sluzba>
+				<sluzba id="504" nazev="Antikoncepční poradenství" cena="600" pojistovna="false">
+					<popis>Konzultace a doporučení vhodné antikoncepční metody.</popis>
+					<trvani>20</trvani>
+				</sluzba>
+			</sluzby>
+		</oddeleniInfo>
+	</oddeleni>
+	<vybaveni>
+		<pristroj id="1001" nazev="Ultrazvuk GE Logiq P9" oddeleni="2,5">
+			<popis>Moderní ultrazvukový přístroj s vysokým rozlišením pro kardiologická a gynekologická vyšetření.</popis>
+			<rok>2022</rok>
+			<vyrobce>GE Healthcare</vyrobce>
+		</pristroj>
+		<pristroj id="1002" nazev="RTG systém Siemens Multix Impact" oddeleni="1">
+			<popis>Digitální RTG systém pro široké spektrum radiologických vyšetření.</popis>
+			<rok>2021</rok>
+			<vyrobce>Siemens Healthineers</vyrobce>
+		</pristroj>
+		<pristroj id="1003" nazev="EKG BTL-08" oddeleni="1,2">
+			<popis>12kanálový elektrokardiograf s automatickou analýzou a interpretací.</popis>
+			<rok>2023</rok>
+			<vyrobce>BTL</vyrobce>
+		</pristroj>
+		<pristroj id="1004" nazev="EEG Neurowerk EEG" oddeleni="3">
+			<popis>Systém pro elektroencefalografické vyšetření s 32 kanály.</popis>
+			<rok>2020</rok>
+			<vyrobce>Sigma Medizin-Technik</vyrobce>
+		</pristroj>
+		<pristroj id="1005" nazev="Kolposkop Leisegang OptiK 1" oddeleni="5">
+			<popis>Optický přístroj pro gynekologické vyšetření děložního čípku.</popis>
+			<rok>2021</rok>
+			<vyrobce>Leisegang</vyrobce>
+		</pristroj>
+	</vybaveni>
+	<pojistovny>
+		<pojistovna id="111" kod="111" nazev="Všeobecná zdravotní pojišťovna">
+			<smlouva>
+				<cislo>VZP-2023-1254</cislo>
+				<platnostOd>2023-01-01</platnostOd>
+				<platnostDo>2025-12-31</platnostDo>
+			</smlouva>
+		</pojistovna>
+		<pojistovna id="201" kod="201" nazev="Vojenská zdravotní pojišťovna">
+			<smlouva>
+				<cislo>VoZP-2023-0458</cislo>
+				<platnostOd>2023-01-01</platnostOd>
+				<platnostDo>2024-12-31</platnostDo>
+			</smlouva>
+		</pojistovna>
+		<pojistovna id="207" kod="207" nazev="Oborová zdravotní pojišťovna">
+			<smlouva>
+				<cislo>OZP-2023-0789</cislo>
+				<platnostOd>2023-01-01</platnostOd>
+				<platnostDo>2025-12-31</platnostDo>
+			</smlouva>
+		</pojistovna>
+		<pojistovna id="211" kod="211" nazev="Zdravotní pojišťovna ministerstva vnitra">
+			<smlouva>
+				<cislo>ZPMV-2023-0321</cislo>
+				<platnostOd>2023-01-01</platnostOd>
+				<platnostDo>2024-12-31</platnostDo>
+			</smlouva>
+		</pojistovna>
+	</pojistovny>
+	<aktuality>
+		<aktualita id="1" datum="2023-11-15">
+			<nadpis>Nové vybavení pro kardiologické oddělení</nadpis>
+			<obsah>Kardiologické oddělení našeho zdravotního centra bylo vybaveno nejnovějším echokardiografickým přístrojem GE Logiq P9, který umožňuje přesnější diagnostiku srdečních onemocnění. Nový přístroj nabízí vysokou kvalitu obrazu a pokročilé funkce pro detailní zobrazení srdečních struktur.</obsah>
+			<autor>MUDr. Eva Svobodová</autor>
+		</aktualita>
+		<aktualita id="2" datum="2023-10-28">
+			<nadpis>Zahájení očk
+            
+				<nadpis>Zahájení očkování proti sezónní chřipce</nadpis>
+				<obsah>Od 1. listopadu zahajujeme očkování proti sezónní chřipce. Očkování je vhodné zejména pro seniory, chronicky nemocné pacienty a těhotné ženy. Objednat se můžete již nyní online nebo telefonicky. Většina zdravotních pojišťoven na očkování přispívá.</obsah>
+				<autor>MUDr. Jan Novák</autor>
+			</aktualita>
+			<aktualita id="3" datum="2023-09-15">
+				<nadpis>Nový lékař v našem týmu</nadpis>
+				<obsah>S radostí oznamujeme, že náš tým posílil MUDr. Tomáš Veselý, specialista v oboru endokrinologie. Doktor Veselý má více než 10 let praxe v diagnostice a léčbě onemocnění endokrinního systému, včetně poruch štítné žlázy a diabetu. Pacienti se mohou objednávat již nyní.</obsah>
+				<autor>Vedení zdravotního centra</autor>
+			</aktualita>
+			<aktualita id="4" datum="2023-08-10">
+				<nadpis>Rozšíření otevírací doby</nadpis>
+				<obsah>Od září rozšiřujeme otevírací dobu našeho centra. Nově budeme pacientům k dispozici ve všední dny od 7:30 do 18:00 hodin a v sobotu od 8:00 do 12:00 hodin. Věříme, že tato změna přispěje k větší dostupnosti naší péče pro pracující pacienty.</obsah>
+				<autor>Vedení zdravotního centra</autor>
+			</aktualita>
+			<aktualita id="5" datum="2023-07-05">
+				<nadpis>Preventivní program pro seniory</nadpis>
+				<obsah>Zahajujeme nový preventivní program zaměřený na seniory nad 65 let. Program zahrnuje komplexní vyšetření včetně krevních testů, EKG, kontroly zraku a sluchu. Pro pacienty VZP je program plně hrazen z pojištění, ostatní pacienti mohou využít zvýhodněnou cenu.</obsah>
+				<autor>MUDr. Jan Novák</autor>
+			</aktualita>
+		</aktuality>
+		<recenze>
+			<hodnoceni id="1" datum="2023-10-12" hvezdy="5">
+				<pacient>Jana Malá</pacient>
+				<text>Výborná péče a profesionální přístup. Oceňuji vstřícnost MUDr. Novákové a její trpělivost při vysvětlování všech postupů. Moderní vybavení a příjemné prostředí. Doporučuji!</text>
+				<oddeleni>Praktický lékař</oddeleni>
+			</hodnoceni>
+			<hodnoceni id="2" datum="2023-09-28" hvezdy="4">
+				<pacient>Petr Svoboda</pacient>
+				<text>Kardiologické oddělení mě příjemně překvapilo krátkou čekací dobou a důkladným vyšetřením. MUDr. Svobodová vše srozumitelně vysvětlila. Jediný malý nedostatek je obtížnější parkování v okolí.</text>
+				<oddeleni>Kardiologie</oddeleni>
+			</hodnoceni>
+			<hodnoceni id="3" datum="2023-09-05" hvezdy="5">
+				<pacient>Kateřina Nováková</pacient>
+				<text>S dcerou jsme navštívily pediatrické oddělení a musím říct, že přístup MUDr. Dvořákové je naprosto skvělý. Má přirozený přístup k dětem, vše trpělivě vysvětluje. Ordinace je krásně vybavená, dcera se tam cítila dobře a nebála se.</text>
+				<oddeleni>Pediatrie</oddeleni>
+			</hodnoceni>
+			<hodnoceni id="4" datum="2023-08-15" hvezdy="3">
+				<pacient>Josef Vrána</pacient>
+				<text>Vyšetření proběhlo profesionálně, ale čekal jsem téměř hodinu nad objednaným časem. Ocenil bych lepší organizaci objednávání pacientů. Samotná péče byla ale na vysoké úrovni.</text>
+				<oddeleni>Neurologie</oddeleni>
+			</hodnoceni>
+			<hodnoceni id="5" datum="2023-07-20" hvezdy="5">
+				<pacient>Martina Kovářová</pacient>
+				<text>Gynekologické oddělení mohu jen doporučit. MUDr. Horáková je velmi empatická a profesionální. Moderní vybavení a příjemné prostředí. Online objednávání funguje skvěle a ušetří spoustu času.</text>
+				<oddeleni>Gynekologie</oddeleni>
+			</hodnoceni>
+		</recenze>
+	</zdravotniCentrum>
