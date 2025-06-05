@@ -309,28 +309,26 @@
 			<autor>MUDr. Eva Svobodová</autor>
 		</aktualita>
 		<aktualita id="2" datum="2023-10-28">
-			<nadpis>Zahájení očk
-            
-				<nadpis>Zahájení očkování proti sezónní chřipce</nadpis>
-				<obsah>Od 1. listopadu zahajujeme očkování proti sezónní chřipce. Očkování je vhodné zejména pro seniory, chronicky nemocné pacienty a těhotné ženy. Objednat se můžete již nyní online nebo telefonicky. Většina zdravotních pojišťoven na očkování přispívá.</obsah>
-				<autor>MUDr. Jan Novák</autor>
-			</aktualita>
-			<aktualita id="3" datum="2023-09-15">
-				<nadpis>Nový lékař v našem týmu</nadpis>
-				<obsah>S radostí oznamujeme, že náš tým posílil MUDr. Tomáš Veselý, specialista v oboru endokrinologie. Doktor Veselý má více než 10 let praxe v diagnostice a léčbě onemocnění endokrinního systému, včetně poruch štítné žlázy a diabetu. Pacienti se mohou objednávat již nyní.</obsah>
-				<autor>Vedení zdravotního centra</autor>
-			</aktualita>
-			<aktualita id="4" datum="2023-08-10">
-				<nadpis>Rozšíření otevírací doby</nadpis>
-				<obsah>Od září rozšiřujeme otevírací dobu našeho centra. Nově budeme pacientům k dispozici ve všední dny od 7:30 do 18:00 hodin a v sobotu od 8:00 do 12:00 hodin. Věříme, že tato změna přispěje k větší dostupnosti naší péče pro pracující pacienty.</obsah>
-				<autor>Vedení zdravotního centra</autor>
-			</aktualita>
-			<aktualita id="5" datum="2023-07-05">
-				<nadpis>Preventivní program pro seniory</nadpis>
-				<obsah>Zahajujeme nový preventivní program zaměřený na seniory nad 65 let. Program zahrnuje komplexní vyšetření včetně krevních testů, EKG, kontroly zraku a sluchu. Pro pacienty VZP je program plně hrazen z pojištění, ostatní pacienti mohou využít zvýhodněnou cenu.</obsah>
-				<autor>MUDr. Jan Novák</autor>
-			</aktualita>
-		</aktuality>
+			<nadpis>Zahájení očkování proti sezónní chřipce</nadpis>
+			<obsah>Od 1. listopadu zahajujeme očkování proti sezónní chřipce. Očkování je vhodné zejména pro seniory, chronicky nemocné pacienty a těhotné ženy. Objednat se můžete již nyní online nebo telefonicky. Většina zdravotních pojišťoven na očkování přispívá.</obsah>
+			<autor>MUDr. Jan Novák</autor>
+		</aktualita>
+		<aktualita id="3" datum="2023-09-15">
+			<nadpis>Nový lékař v našem týmu</nadpis>
+			<obsah>S radostí oznamujeme, že náš tým posílil MUDr. Tomáš Veselý, specialista v oboru endokrinologie. Doktor Veselý má více než 10 let praxe v diagnostice a léčbě onemocnění endokrinního systému, včetně poruch štítné žlázy a diabetu. Pacienti se mohou objednávat již nyní.</obsah>
+			<autor>Vedení zdravotního centra</autor>
+		</aktualita>
+		<aktualita id="4" datum="2023-08-10">
+			<nadpis>Rozšíření otevírací doby</nadpis>
+			<obsah>Od září rozšiřujeme otevírací dobu našeho centra. Nově budeme pacientům k dispozici ve všední dny od 7:30 do 18:00 hodin a v sobotu od 8:00 do 12:00 hodin. Věříme, že tato změna přispěje k větší dostupnosti naší péče pro pracující pacienty.</obsah>
+			<autor>Vedení zdravotního centra</autor>
+		</aktualita>
+		<aktualita id="5" datum="2023-07-05">
+			<nadpis>Preventivní program pro seniory</nadpis>
+			<obsah>Zahajujeme nový preventivní program zaměřený na seniory nad 65 let. Program zahrnuje komplexní vyšetření včetně krevních testů, EKG, kontroly zraku a sluchu. Pro pacienty VZP je program plně hrazen z pojištění, ostatní pacienti mohou využít zvýhodněnou cenu.</obsah>
+			<autor>MUDr. Jan Novák</autor>
+		</aktualita>
+	</aktuality>
 		<recenze>
 			<hodnoceni id="1" datum="2023-10-12" hvezdy="5">
 				<pacient>Jana Malá</pacient>

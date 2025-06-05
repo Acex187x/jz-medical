@@ -87,7 +87,7 @@
 	<xs:simpleType name="emailType">
 		<xs:restriction base="xs:string">
 			<!-- Omezení: validní emailová adresa -->
-			<xs:pattern value="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"/>
+			<xs:pattern value="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<!-- Definice typu socialniSiteType -->

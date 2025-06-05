@@ -57,18 +57,10 @@
         
         <!-- Otevírací doba -->
         <xsl:text>"oteviraciDoba": [&#xa;</xsl:text>
+        <!-- Simple day sorting with traditional approach -->
         <xsl:for-each select="zdravotniCentrum/oteviraciDoba/den">
-            <xsl:sort select="@nazev" order="ascending" case-order="upper-first">
-                <xsl:choose>
-                    <xsl:when test="@nazev='Pondělí'">1</xsl:when>
-                    <xsl:when test="@nazev='Úterý'">2</xsl:when>
-                    <xsl:when test="@nazev='Středa'">3</xsl:when>
-                    <xsl:when test="@nazev='Čtvrtek'">4</xsl:when>
-                    <xsl:when test="@nazev='Pátek'">5</xsl:when>
-                    <xsl:when test="@nazev='Sobota'">6</xsl:when>
-                    <xsl:when test="@nazev='Neděle'">7</xsl:when>
-                </xsl:choose>
-            </xsl:sort>
+            <!-- Simple sort using a straightforward approach -->
+            <xsl:sort select="translate(@nazev, 'PondělíÚterýStředaČtvrtekPátekSobotaNeděle', '1234567')" data-type="number"/>
             <xsl:text>{&#xa;</xsl:text>
             <xsl:text>"den": "</xsl:text><xsl:value-of select="@nazev"/><xsl:text>",&#xa;</xsl:text>
             <xsl:text>"otevreno": "</xsl:text><xsl:value-of select="otevreno"/><xsl:text>",&#xa;</xsl:text>
